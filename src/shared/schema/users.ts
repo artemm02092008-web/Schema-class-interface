@@ -9,4 +9,5 @@ export const users = pgTable("users", {
   passwordHash: varchar("password_hash", { length: 255 }).notNull(),
   role: varchar("role", { length: 20 }).notNull(),
   email: varchar("email", { length: 255 }).notNull().unique(),
+  name: varchar("name", { length: 100 }), // <-- Добавили поле для имени
 });
